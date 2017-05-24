@@ -13,12 +13,12 @@ public class Seek : SteeringBehaviour
         Vector3 force = Vector3.zero;
 
         // IF there is no target, then return force
-        if (!target)
+        if (target == null)
         {
             return force;
         }
         // SET desiredForce to direction from target to position
-        Vector3 desiredForce = target.position;
+        Vector3 desiredForce = target.position - transform.position;
         // SET desiredForce y to zero
         desiredForce.y = 0;
         // IF direction is greater than stopping distance
@@ -33,3 +33,4 @@ public class Seek : SteeringBehaviour
         return force;
     }
 }
+// Flee seek

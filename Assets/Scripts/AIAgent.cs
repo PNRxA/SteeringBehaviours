@@ -22,6 +22,7 @@ public class AIAgent : MonoBehaviour
     void Update()
     {
         ComputeForces();
+        ApplyVelocity();
     }
 
     void ComputeForces()
@@ -63,7 +64,8 @@ public class AIAgent : MonoBehaviour
         if (velocity.magnitude > maxVelocity)
         {
             // Clamp velocity
-            force = Vector3.ClampMagnitude(force, maxVelocity);
+            //force = Vector3.ClampMagnitude(force, maxVelocity);
+            force = force.normalized * maxVelocity;
         }
         // IF velocity != zero
         if (velocity != Vector3.zero)
