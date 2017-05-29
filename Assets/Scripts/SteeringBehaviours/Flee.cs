@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seek : SteeringBehaviour
+public class Flee : SteeringBehaviour
 {
     public Transform target;
     public float stoppingDistance = 0f;
@@ -18,11 +18,11 @@ public class Seek : SteeringBehaviour
             return force;
         }
         // SET desiredForce to direction from target to position
-        Vector3 desiredForce = target.position - transform.position;
+        Vector3 desiredForce = (target.position - transform.position) * -1;
         // SET desiredForce y to zero
         desiredForce.y = 0;
         // IF direction is greater than stopping distance
-        if (desiredForce.magnitude > stoppingDistance)
+        if (desiredForce.magnitude < stoppingDistance)
         {
             // SET desiredForce to normalized and multipl|y by weighting
             desiredForce = desiredForce.normalized * weighting;

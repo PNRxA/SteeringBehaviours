@@ -8,14 +8,12 @@ public class AIAgent : MonoBehaviour
     public Vector3 velocity;
     public float maxVelocity = 100f;
 
-    private List<SteeringBehaviour> behaviours;
+    private SteeringBehaviour[] behaviours;
 
     // Use this for initialization
     void Start()
     {
-        // This is Scott
-        SteeringBehaviour[] ohBehave = GetComponents<SteeringBehaviour>();
-        behaviours = new List<SteeringBehaviour>(GetComponents<SteeringBehaviour>());
+        behaviours = GetComponents<SteeringBehaviour>();
     }
 
     // Update is called once per frame
@@ -65,7 +63,7 @@ public class AIAgent : MonoBehaviour
         {
             // Clamp velocity
             //force = Vector3.ClampMagnitude(force, maxVelocity);
-            force = force.normalized * maxVelocity;
+            velocity = velocity.normalized * maxVelocity;
         }
         // IF velocity != zero
         if (velocity != Vector3.zero)
