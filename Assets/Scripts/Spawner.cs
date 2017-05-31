@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public float spawnRate = 1f;
 
     private float spawnTimer = 0f;
-    private List<GameObject> objects = new List<GameObject>();
+    public List<GameObject> objects = new List<GameObject>();
 
     /// <summary>
     /// Callback to draw gizmos that are pickable and always drawn.
