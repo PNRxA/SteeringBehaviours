@@ -66,8 +66,6 @@ public class Spawner : MonoBehaviour
         GameObject clone = Instantiate(prefab, transform.position + position, rotation);
         // ADD clone to objects list
         objects.Add(clone);
-        // SET clone's position to spawner position + position
-        // SET clone's rotation to rotation
     }
 
     // Use this for initialization
@@ -84,10 +82,9 @@ public class Spawner : MonoBehaviour
         // IF spawnTimer > spawnRate
         if (spawnTimer > spawnRate)
         {
-            // SET randomPoint to GenerateRandomPoint()
             // CALL Spawn() and pass randomPoint, Quaternion identity
-            // SET spawnTimer to zero
             Spawn(GenerateRandomPoint(), Quaternion.identity);
+            // SET spawnTimer to zero
             spawnTimer = 0;
         }
     }
