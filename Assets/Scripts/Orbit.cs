@@ -39,6 +39,7 @@ public class Orbit : MonoBehaviour
         if (Camera.main.orthographic)
         {
             orthoSize = Mathf.Clamp(orthoSize - scroll, minOrthoSize, maxOrthosize);
+            Camera.main.orthographicSize = orthoSize;
         }
         else
         {
