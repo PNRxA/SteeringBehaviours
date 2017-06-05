@@ -25,52 +25,48 @@ public class AIAgent : MonoBehaviour
 
     void ComputeForces()
     {
-        // Reset the force before computing
-        force = Vector3.zero;
-
-        // FOR each behavioiur attached to AIAgent
-        foreach (var behaviour in behaviours)
+        // SET force to zero
+        force = Vector3.zero; // When you create a variable in a function,
+                              // It only exists within that function. 
+                              // FOR i = 0 to behaviours length
+        for (int i = 0; i < behaviours.Length; i++)
         {
-            // Check if behaviour is !active
+            SteeringBehaviour behaviour = behaviours[i];
+            // IF behaviour is not enabled
             if (!behaviour.enabled)
             {
-                // CONTINUE to the next behaviour
+                // CONTINUE
                 continue;
             }
-            else
+            // SET force to force + behaviour's force
+            force += behaviour.GetForce();
+            // IF force is greater than maxVelocity    
+            if (force.magnitude > maxVelocity)
             {
-                // Get force from behaviour
-                force += behaviour.GetForce();
-                // IF forces are too big 
-                if (force.magnitude > maxVelocity)
-                {
-                    // Clamp force to the max velocity
-                    //force = Vector3.ClampMagnitude(force, maxVelocity);
-                    force = force.normalized * maxVelocity;
-                    // EXIT for loop
-                    break;
-                }
+                // SET force to force normalized x maxVelocity
+                force = force.normalized * maxVelocity;
+                // BREAK
+                break;
             }
         }
     }
 
     void ApplyVelocity()
     {
-        // Append force to velocity with deltaTime
+        // SET velocity to velocity + force x delta time
         velocity += force * Time.deltaTime;
         // IF velocity is greater than maxVelocity 
         if (velocity.magnitude > maxVelocity)
         {
-            // Clamp velocity
-            //force = Vector3.ClampMagnitude(force, maxVelocity);
+            // SET velocity to velocity normalized x maxVelocity
             velocity = velocity.normalized * maxVelocity;
         }
-        // IF velocity != zero
+        // IF velocity is greater than zero
         if (velocity != Vector3.zero)
         {
-            // Append transform position by velocity
+            // SET position to position + velocity x delta time
             transform.position += velocity * Time.deltaTime;
-            // Transform rotate by velocity
+            // SET rotation to Quaternion.LookRotation velocity
             transform.rotation = Quaternion.LookRotation(velocity);
         }
     }

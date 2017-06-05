@@ -8,7 +8,10 @@ public class SteeringBehaviour : MonoBehaviour
     public float weighting = 7.5f;
     [HideInInspector] public AIAgent owner;
 
-    void Start()
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    void Awake()
     {
         owner = GetComponent<AIAgent>();
     }
