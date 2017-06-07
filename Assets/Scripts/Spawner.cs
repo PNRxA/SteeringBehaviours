@@ -63,7 +63,7 @@ public class Spawner : MonoBehaviour
     public void Spawn(Vector3 position, Quaternion rotation)
     {
         // SET clone to new instance of prefab
-        GameObject clone = Instantiate(prefab, transform.position + position, rotation);
+        GameObject clone = Instantiate(prefab, position, rotation);
         // ADD clone to objects list
         objects.Add(clone);
     }
@@ -83,7 +83,7 @@ public class Spawner : MonoBehaviour
         if (spawnTimer > spawnRate)
         {
             // CALL Spawn() and pass randomPoint, Quaternion identity
-            Spawn(GenerateRandomPoint(), Quaternion.identity);
+            Spawn(transform.position + GenerateRandomPoint(), Quaternion.identity);
             // SET spawnTimer to zero
             spawnTimer = 0;
         }

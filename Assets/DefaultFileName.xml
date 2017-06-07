@@ -3,72 +3,144 @@
   <spawners>
     <SpawnerData>
       <position>
-        <x>-9.027423</x>
-        <y>0.466549039</y>
-        <z>5.064654</z>
+        <x>-35.0841026</x>
+        <y>0.46654892</y>
+        <z>-10.2540045</z>
       </position>
       <rotation>
         <x>0</x>
-        <y>-0.285667717</y>
+        <y>0.983870447</y>
         <z>0</z>
-        <w>0.9583287</w>
+        <w>-0.178882644</w>
         <eulerAngles>
           <x>0</x>
-          <y>326.80246</y>
+          <y>200.60936</y>
           <z>0</z>
         </eulerAngles>
       </rotation>
     </SpawnerData>
     <SpawnerData>
       <position>
-        <x>5.37469339</x>
-        <y>0.466547668</y>
-        <z>-1.25271022</z>
+        <x>-4.39244556</x>
+        <y>0.46654886</y>
+        <z>32.851532</z>
       </position>
       <rotation>
         <x>0</x>
-        <y>0.895521343</y>
+        <y>0.3578671</y>
         <z>0</z>
-        <w>0.4450186</w>
+        <w>0.933772564</w>
         <eulerAngles>
           <x>0</x>
-          <y>127.15094</y>
+          <y>41.93853</y>
           <z>0</z>
         </eulerAngles>
       </rotation>
     </SpawnerData>
     <SpawnerData>
       <position>
-        <x>-4.62419</x>
-        <y>0.466549039</y>
-        <z>-1.77249753</z>
+        <x>-21.5517616</x>
+        <y>0.46654886</y>
+        <z>-18.13227</z>
       </position>
       <rotation>
         <x>0</x>
-        <y>0.947862267</y>
+        <y>0.9927197</y>
         <z>0</z>
-        <w>-0.3186803</w>
+        <w>-0.120447457</w>
         <eulerAngles>
           <x>0</x>
-          <y>217.16626</y>
+          <y>193.835846</y>
           <z>0</z>
         </eulerAngles>
       </rotation>
     </SpawnerData>
     <SpawnerData>
       <position>
-        <x>-1.56312954</x>
-        <y>0.4665128</y>
-        <z>-0.45171386</z>
+        <x>-21.3141212</x>
+        <y>0.46654892</y>
+        <z>24.7899284</z>
       </position>
       <rotation>
         <x>0</x>
-        <y>-0.7108723</y>
+        <y>-0.272343546</y>
         <z>0</z>
-        <w>0.7033211</w>
+        <w>0.9622001</w>
         <eulerAngles>
           <x>0</x>
-          <y>269.388123</y>
+          <y>328.392456</y>
+          <z>0</z>
+        </eulerAngles>
+      </rotation>
+    </SpawnerData>
+    <SpawnerData>
+      <position>
+        <x>-11.0068426</x>
+        <y>0.46654892</y>
+        <z>-16.6122665</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0.9829616</y>
+        <z>0</z>
+        <w>-0.183811113</w>
+        <eulerAngles>
+          <x>0</x>
+          <y>201.183655</y>
+          <z>0</z>
+        </eulerAngles>
+      </rotation>
+    </SpawnerData>
+    <SpawnerData>
+      <position>
+        <x>-5.026056</x>
+        <y>0.4665488</y>
+        <z>6.105034</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0.5757369</y>
+        <z>0</z>
+        <w>0.8176351</w>
+        <eulerAngles>
+          <x>0</x>
+          <y>70.3025055</y>
+          <z>0</z>
+        </eulerAngles>
+      </rotation>
+    </SpawnerData>
+    <SpawnerData>
+      <position>
+        <x>-12.815052</x>
+        <y>0.46654886</y>
+        <z>-4.39599848</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0.9991275</y>
+        <z>0</z>
+        <w>-0.04176419</w>
+        <eulerAngles>
+          <x>0</x>
+          <y>184.787216</y>
+          <z>0</z>
+        </eulerAngles>
+      </rotation>
+    </SpawnerData>
+    <SpawnerData>
+      <position>
+        <x>-13.8579416</x>
+        <y>0.5445742</y>
+        <z>-0.133508861</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>-0.8323708</y>
+        <z>0</z>
+        <w>0.5542192</w>
+        <eulerAngles>
+          <x>0</x>
+          <y>247.3139</y>
           <z>0</z>
         </eulerAngles>
       </rotation>
